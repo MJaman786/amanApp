@@ -49,7 +49,11 @@ function savetoLocalstorage(){
 }
 
 function loadfromLocalstorage(){
-    taskList = JSON.parse(localStorage.getItem('taskList'));
+    let storedTaskList = localStorage.getItem('taskList');
+    if (storedTaskList) {
+        taskList = JSON.parse(storedTaskList);
+    }
+    // Ensure to display tasks after loading from localStorage
     display();
 }
 
