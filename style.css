@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /* background-color: lightseagreen; */
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: deeppink;
+}
+
+#taskContainer{
+    width: 100%;
+    height: 60px;
+    /* background-color:aqua; */
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 0px 10px;
+}
+input,button {
+    margin: 8px;
+    padding: 10px; /* Added padding for better user experience */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    flex-grow: 1;
+}
+
+#textBox {
+    width: 40%; /* Text input takes 40% of the container width */
+}
+
+#dateBox {
+    width: 30%; /* Date input takes 20% of the container width */
+}
+
+#textBox[type="text"] {
+    padding-left: 10px; /* Add padding to the left */
+}
+
+@media (max-width:600px) {
+    #taskContainer{
+        flex-direction: row;
+        /* overflow-y: auto; */
+    }
+    input, button {
+        width: 80%; /* Make inputs and button take 80% width */
+        margin-bottom: 10px;
+    }
+    #textBox {
+        width: 100%; /* Full width for the text input */
+    }
+
+    #dateBox {
+        width: 40px; /* Full width for the date input */
+    }
+}
+
+/* taskList */
+#taskList{
+    margin-top: 10px;
+    width: 100%;
+    height: fit-content;
+    /* background-color:cadetblue; */
+    overflow-y:auto;
+    overflow-x:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+}
+.newTaskCtn{
+    padding: 10px;
+    border-radius: 10px;
+    /* background-color: aquamarine; */
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.newTaskCtn span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.taskName{
+    width: 100%;
+    height: 80px;
+    background-color: aliceblue;
+}
+
+.taskDate{
+    width: 100%;
+    height: 30px;
+    background-color: aliceblue;
+}
+
+.clsBtn{
+    width: 100%;
+    background-color: lightgreen;
+}
+@media (max-width:600px) {
+    .newTaskCtn{
+        width: 80%;
+        /* background-color: lightgreen; */
+    }
+}
+
+
+
