@@ -55,7 +55,8 @@ input,button {
 
 @media (max-width:600px) {
     #taskContainer{
-        flex-direction: row;
+        flex-direction: column;
+        height: 200px;
         /* overflow-y: auto; */
     }
     input, button {
@@ -67,7 +68,7 @@ input,button {
     }
 
     #dateBox {
-        width: 40px; /* Full width for the date input */
+        width: 100%; /* Full width for the date input */
     }
 }
 
